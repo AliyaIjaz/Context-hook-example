@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
 export const ThemeContext = createContext();
 
@@ -24,13 +24,16 @@ export const ThemeContext = createContext();
 const ThemeContextProvider = (props) => {
 
     const [isLightTheme, setIsLightTheme] = useState(true);
-    const [light, setLight] = useState(
-        { syntax: '#555', ui: '#ddd', bg: '#eee'}
-    );
-    const [dark, setDark] = useState(
-        { syntax: '#ddd', ui: '#333', bg: '#555'}
-    );
+    // const [light, setLight] = useState(
+    //     { syntax: '#555', ui: '#ddd', bg: '#eee'}
+    // );
+    // const [dark, setDark] = useState(
+    //     { syntax: '#ddd', ui: '#333', bg: '#555'}
+    // );
 
+    const light = { syntax: '#555', ui: '#ddd', bg: '#eee'};
+    const dark = { syntax: '#ddd', ui: '#333', bg: '#555'};
+    
     const toggleTheme= () => {
         setIsLightTheme(!isLightTheme);
     }
