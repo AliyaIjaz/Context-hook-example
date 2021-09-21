@@ -38,4 +38,4 @@ jobs:
       run: npm install -g surge
       
     - name: deploying on surge
-      run: surge ./build http://short-animation-by-aliyaijaz.surge.sh/ --token ${{secrets.SURGE_TOKEN}}  
+      run: surge ./build http://context-hook-exp-by-aliyaijaz.surge.sh/ --token ${{secrets.SURGE_TOKEN}}  
